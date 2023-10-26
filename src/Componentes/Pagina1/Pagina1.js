@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 //import ImageCarousel from './Carousel'; // Importa el componente del carrusel
-import Footer from './Footer';
-import './Pagina1.css';
+import Footer from '../Footer/Footer';
+import './Pagina1.css'
 
 
 const Option1 = () => {

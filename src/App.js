@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; // Importa Routes
-import Navbar from './Navbar';
-import Pagina1 from './Pagina1';
-import Pagina2 from './Pagina2';
-import Pagina3 from './Pagina3';
-import Pagina4 from './Pagina4';
+import Navbar from './Componentes/Navbar/Navbar';
+import Pagina1 from './Componentes/Pagina1/Pagina1';
+import Pagina2 from './Componentes/Pagina2/Pagina2';
+import Pagina3 from './Componentes/Pagina3/Pagina3';
+import Pagina4 from './Componentes/Pagina4/Pagina4';
 
 import "font-awesome/css/font-awesome.css";
 

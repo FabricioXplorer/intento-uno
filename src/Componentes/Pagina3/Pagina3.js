@@ -1,6 +1,6 @@
 // Pagina3.js
 import React from 'react';
-import './Card.css'
+
 
 
 function Pagina3({ cards }) {

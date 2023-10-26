@@ -24,7 +24,7 @@ const Navbar = () => {
           </li>
           <li className="navbar-item">
           <i class="fa fa-building" aria-hidden="true"></i>
-            <Link to="/opcion2">Inmuebles</Link>
+            <Link to="/opcion2">Publica tu Inmueble</Link>
           </li>
           <li className="navbar-item">
           <i class="fa fa-address-book" aria-hidden="true"></i>

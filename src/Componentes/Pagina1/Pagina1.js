@@ -23,7 +23,7 @@ const Option1 = () => {
   return (
     <div className='Option1'>
       <h1 className='typing-animation'>{text}</h1>
-      <img src='imagenes/imagen11.jpg' alt='Imagen' />
+      <img src='imagenes/imagen22.jpg' alt='Imagen' />
       <Footer />
     </div>
   );

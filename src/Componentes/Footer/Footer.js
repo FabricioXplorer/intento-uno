@@ -42,7 +42,7 @@ function Footer() {
         </div>
         <div className={styles.company_info}><br/>
           
-          <p>© 2023 CasaNegocios</p>
+          <label>© 2023 CasaNegocios</label>
         </div>
       </div>
     </footer>

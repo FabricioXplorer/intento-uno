@@ -6,22 +6,22 @@ function App() {
   const [newCard, setNewCard] = useState({
     title: '',
     imageSrc: '',
-    
     comment: '',
     price: '',
     location: '',
+    contact: '',
   });
 
   const addCard = () => {
-    if (newCard.title && newCard.imageSrc &&  newCard.comment && newCard.price) {
+    if (newCard.title && newCard.imageSrc &&  newCard.comment && newCard.price  && newCard.contact) {
       setCards([...cards, newCard]);
       setNewCard({
         title: '',
-        imageSrc: '',
-        
+        imageSrc: '',        
         comment: '',
         price: '',
         location: '',
+        contact: '',
       });
     }
   };
@@ -41,7 +41,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>Propiedades en Venta</h1>
+      <h1>Genera Tu Publicidad Gratis</h1>
       <form className="add-card-form" onSubmit={(e) => e.preventDefault()}>
       <div className="form-group">
           <label>Título:</label>
@@ -71,6 +71,7 @@ function App() {
             onChange={(e) => setNewCard({ ...newCard, comment: e.target.value })}
           />
         </div>
+
         <div className="form-group">
           <label>Precio:</label>
           <input
@@ -80,9 +81,20 @@ function App() {
             onChange={(e) => setNewCard({ ...newCard, price: e.target.value })}
           />
         </div>
+
+        <div className="form-group">
+          <label>Contacto:</label>
+          <input
+            type="number"
+            placeholder="Información de contacto"
+            value={newCard.contact}
+            onChange={(e) => setNewCard({ ...newCard, contact: e.target.value })}
+          />
+        </div>
+
         <div className="form-group">
           <label>Ubicación:</label>
-          <select
+          <select className="app"
             value={newCard.location}
             onChange={(e) => setNewCard({ ...newCard, location: e.target.value })}
             style={{ width: '100%' }}
@@ -99,21 +111,23 @@ function App() {
             <option value="Cochabamba">Cochabamba</option>
           </select>
         </div>
-        <button onClick={addCard}>Agregar Tarjeta</button>
+
+        <button onClick={addCard}>Enviar Publicidad</button>
       </form>
 
       <div className="app">
-        <h1>Tarjetas de Propiedades</h1>
+        <h1>Publicaciones</h1>
         <div className="card-list">
           {cards && cards.map((card, index) => (
             <div className="card" key={index}>
                <p className="card-title">{card.title}</p>
               <div className="circle-container" style={{ backgroundImage: `url(${card.imageSrc})` }}></div>
               <div className="card-details">
-               
-                <p className="card-comment">Descripcion<br/>{card.comment}</p>
-                <p className="card-price">Precio: Bs.{card.price}</p>
+                <p className="card-comment">Descripcion:<br/>{card.comment}</p>
+                <p className="card-price">Precio: $.{card.price}</p>
+                <p className='card-contact'>Numero de Contacto: {card.contact}</p> 
                 <p className="card-location">Ubicación: {card.location}/Bolivia.</p>
+
               </div>
             </div>
           ))}
